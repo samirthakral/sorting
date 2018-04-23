@@ -1,9 +1,9 @@
 describe('bubblesort.js', () => {
 
   describe('Bubble Sort', function(){
-    // beforeAll(function () {
-    //   spyOn(bubbleSort, 'swap').and.callThrough();
-    // });
+    beforeEach(function () {
+      spyOn(window, 'swap').and.callThrough();
+    });
 
     it('handles an empty array', function(){
       expect( bubbleSort([]) ).toEqual( [] );
@@ -21,7 +21,7 @@ describe('bubblesort.js', () => {
     it('Swap is called the correct number of times', function(){
       let arr = [3,14,1,8,2,10];
       bubbleSort(arr);
-      expect(swap.calls.count()).toEqual();
+      expect(swap.calls.count()).toEqual(7);
     })
   })
 })
