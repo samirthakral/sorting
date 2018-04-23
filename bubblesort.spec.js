@@ -1,11 +1,11 @@
 describe('bubblesort.js', () => {
 
   describe('Bubble Sort', function(){
-    beforeAll(function () {
-      spyOn(bubbleSort, 'swap').and.callThrough();
-    });
+    // beforeAll(function () {
+    //   spyOn(bubbleSort, 'swap').and.callThrough();
+    // });
 
-      it('handles an empty array', function(){
+    it('handles an empty array', function(){
       expect( bubbleSort([]) ).toEqual( [] );
     });
 
@@ -22,6 +22,6 @@ describe('bubblesort.js', () => {
       let arr = [3,14,1,8,2,10];
       bubbleSort(arr);
       expect(swap.calls.count()).toEqual();
-    }
+    })
   })
 })
